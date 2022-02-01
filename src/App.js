@@ -14,6 +14,7 @@ export default function App() {
     const response = await request(gql`
       {
         ships {
+          id
           name
           home_port
           roles

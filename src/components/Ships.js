@@ -4,7 +4,7 @@ const Ships = ({ ships }) => {
     console.log('ships', ships)
     const shipContainer = ships && ships.map(ship => {
         return (
-            <div className="ship">
+            <div className="ship" key={ship.id}>
                 <img src={ship.image} className="ship__image" />
                 <div className="footer">
                     <div className="ship__name">{ ship.name }</div>

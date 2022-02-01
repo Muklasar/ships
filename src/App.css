@@ -44,6 +44,7 @@ body{
   margin: none;
   border: none;
   border-radius: 0px 6px 6px 0px;
+  cursor: pointer
 
 }
 
@@ -86,6 +87,11 @@ body{
   }
   .description_font{
     font-size: 8px;
+  }
+  .counter{
+    padding: .8rem .2rem;
+    text-transform: uppercase;
+    font-size: 12px;
   }
 }
 
