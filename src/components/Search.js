@@ -16,9 +16,19 @@ const Search = ({ data, setShips }) => {
         iElement.current.focus()
     },[])
 
+    const textHandler = (value) =>{
+        if(value.length>0){
+            setText(value)
+        }
+        else{
+            setUpdate(!update)
+            setText(value)
+        }
+    }
+
     return (
         <div className='search__section'>
-            <input type="text" className='search__input' onChange={(e)=>setText(e.target.value)} value={text} placeholder="Search ships" ref={iElement}/>
+            <input type="text" className='search__input' onChange={(e)=>textHandler(e.target.value)} value={text} placeholder="Search ships" ref={iElement}/>
             <button className='search__button' onClick={()=>setUpdate(!update)}>
                 <img className='search__logo' src="https://firebasestorage.googleapis.com/v0/b/mystore-51bd6.appspot.com/o/image%2Fmagnifying-glass.png?alt=media&token=16a5f0d8-ece6-4354-b2d5-09d547cfd012" />
             </button>
